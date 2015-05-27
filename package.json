@@ -26,7 +26,17 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "is",
+    "array",
+    "typed",
+    "typed array",
+    "float64array",
+    "isfloat64array",
+    "class",
+    "constructor",
+    "instance"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/float64array/issues"

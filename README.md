@@ -1,8 +1,8 @@
-float64array
+Float64Array
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Validates if a value is a Float64Array.
+> Validates if a value is a [Float64Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array).
 
 
 ## Installation
@@ -17,18 +17,61 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-float64array' );
+var isFloat64Array = require( 'validate.io-float64array' );
 ```
 
-#### foo( value )
+#### isFloat64Array( value )
 
-What does this function do?
+Validates if a value is a [Float64Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array).
+
+``` javascript
+var arr = new Float64Array( 10 );
+
+var bool = isFloat64Array( arr );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-float64array' );
+var isFloat64Array = require( 'validate.io-float64array' );
+
+console.log( isFloat64Array( new Float64Array( 10 ) ) );
+// returns true
+
+console.log( isFloat64Array( new Int8Array( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( new Uint8Array( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( new Uint8ClampedArray( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( new Int16Array( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( new Uint16Array( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( new Int32Array( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( new Uint32Array( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( new Float32Array( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( new Array( 10 ) ) );
+// returns false
+
+console.log( isFloat64Array( {} ) );
+// returns false
+
+console.log( isFloat64Array( null ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
